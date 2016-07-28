@@ -25,10 +25,10 @@
                 ?>
                   <tr> 
                     <td>
-                        <a href="/item/<?php echo  $item->id; ?>">
+                        <a href="product.php?id=<?php echo  $item->id; ?>">
                             <img src="<?php echo  $item->images[0]; ?>" alt="<?php echo   $item->name ; ?>" style="width:32px;"></a></td>
                     <td>
-                        <a href="/item/<?php echo  $item->id; ?>"><?php echo  $item->name; ?></a>
+                        <a href="product.php?id=<?php echo  $item->id; ?>"><?php echo  $item->name; ?></a>
 
                         <div>
                             <?php  if ($item->has_variants === true) {

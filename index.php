@@ -20,7 +20,7 @@
                                 <div class="group-title">Categories</div>
                                 <?php for ($i=0; $i< count($categories);$i++) { ?>
                                     <div class="group-item">
-                                        <a href="/search?category_id=<?php echo $categories[$i]->id; ?>" ><?php echo $categories[$i]->name; ?></a>
+                                        <a href="index.php?category_id=<?php echo $categories[$i]->id; ?>" ><?php echo $categories[$i]->name; ?></a>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -30,7 +30,7 @@
 
                                 <div class="group-title">Brands</div>
                                 <?php for ($i=0; $i< count($brands);$i++) { ?>
-                                    <div  class="group-item"><a href="/search?brand_id=<?php echo $brands[$i]->id; ?>"><?php echo $brands[$i]->name; ?></a></div>
+                                    <div  class="group-item"><a href="index.php?brand_id=<?php echo $brands[$i]->id; ?>"><?php echo $brands[$i]->name; ?></a></div>
                                 <?php } ?>
                             </div>
 
@@ -51,7 +51,7 @@
 
                 <?php for ($i=0; $i<count($products);$i++) { ?>
                     <div class="col-sm-4 col-lg-4 col-md-4 col-xs-12">
-                        <a class="product" href="/item/<?php echo $products[$i]->id; ?>">
+                        <a class="product" href="product.php?id=<?php echo $products[$i]->id; ?>">
                            <?php if ($products[$i]->images) { ?>
                              <div class="image" style="background-image:url(<?php echo $products[$i]->images[0] ?>)">
                              </div>
