@@ -1,5 +1,5 @@
 {
-  "name": "MarketcloudPHPStarter",
+  "name": "marketcloud-php-starter",
   "authors": [
     "fatmatto <cikkense@gmail.com>"
   ],
@@ -15,5 +15,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "marketcloud-js": "1.1.1"
+  }
 }
