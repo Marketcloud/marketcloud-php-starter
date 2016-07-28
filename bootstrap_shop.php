@@ -13,6 +13,11 @@ if (!isset($_SESSION["marketcloud_cart_id"]) OR empty($_SESSION["marketcloud_car
 
 } else {
 	$cart_response = Marketcloud\Carts::getById($_SESSION["marketcloud_cart_id"]);
+	if ($cart_response->body->status == false){
+		$cart_response = Marketcloud\Carts::create();
+		$_SESSION["marketcloud_cart_id"] = $cart_response->body->data->id;
+	}
+
 }
 $_SESSION["marketcloud_cart_items_number"] = count($cart_response->body->data->items);
 
