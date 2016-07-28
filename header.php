@@ -17,7 +17,7 @@ include('bootstrap_shop.php');
 		
 		
 	</head>
-	<body style="height:100%;margin-top:100px;">
+	<body>
 		<?php include("navbar.php"); ?>
 
 <script src="/public/components/jquery/dist/jquery.min.js"></script>
