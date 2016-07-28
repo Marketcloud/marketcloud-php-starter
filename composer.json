@@ -1,0 +1,5 @@
+{
+    "require": {
+        "marketcloud/marketcloud-php": "^1.0"
+    }
+}
