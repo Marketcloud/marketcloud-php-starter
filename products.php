@@ -1,59 +1,86 @@
 <?php require('header.php'); ?>
 <?php
 	$products = Marketcloud\Products::get($_GET);
+	$products = $products->body->data;
 	$categories = Marketcloud\Categories::get();
 	$categories = $categories->body->data;
- ?>
-		<div class="container-fluid slidethankyou shop-container">
-			<div class="text_box white centered txt_center">
-				<h2 class="yellow">Merchandising</h2>
-				
-			</div>
+	$brands = Marketcloud\Brands::get();
+	$brands = $brands->body->data;
+?>
+<div class="container-fluid">
 
-			<div class="row" style="margin-top:50px;margin-bottom:50px;">
-				<div class="col-lg-8 col-lg-offset-2">
-					<?php require('embedded_cart.php'); ?>
-				</div>
-			</div>
-				
-				<div class="row" style="margin-bottom:50px;">
-					<div class="col-lg-8 col-lg-offset-2" id="categories_container">
-				<?php foreach ($categories as $category): ?>
-					<div class="col-md-2 col-xs-4" style="margin-bottom:20px;">
-						<a class="category_link" href="<?php echo "index.php?category_id=".$category->id; ?>"><?php echo $category->name; ?></a>
-					</div>
+        <div class="row">
 
-				<?php endforeach; ?>
-				</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2" id="products_container">
-						<!-- product -->
-						
-						<?php foreach ($products->body->data as $product): ?>
-						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-							<a class="thumbnail product" href="product.php?id=<?php echo $product->id; ?>">
-								<!-- <img src="<?php echo $product->images[0]; ?>" style="height:200px;"> -->
-								<div class="product_image" style="background-image:url(<?php echo $product->images[0]; ?>)"></div>
-								<div class="text-center">
-									<p><div class="product_name"><?php echo $product->name; ?></div></p>
-									<p>€ <?php echo $product->price; ?></p>
-								</div>
-							</a>
-						</div>
-						<?php endforeach; ?>
-						<!-- end product -->
-					</div>
-				</div>
-				
-			</div>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../bower_components/marketcloud-js/dist/marketcloud.min.js"></script>
+            <div class=" col-xs-12 col-md-3 sidenav">
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-12 col-lg-12">
+                            
+                            <div class="group">
+                                <div class="group-title">Categories</div>
+                                <?php for ($i=0; $i< count($categories);$i++) { ?>
+                                    <div class="group-item">
+                                        <a href="index.php?category_id=<?php echo $categories[$i]->id; ?>" ><?php echo $categories[$i]->name; ?></a>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-lg-12">
+                             <div class="group">
+
+                                <div class="group-title">Brands</div>
+                                <?php for ($i=0; $i< count($brands);$i++) { ?>
+                                    <div  class="group-item"><a href="index.php?brand_id=<?php echo $brands[$i]->id; ?>"><?php echo $brands[$i]->name; ?></a></div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                    </div>
+                
+                
+                
+                
+                   
+                
+            </div>
+
+            <div class="col-md-9 col-xs-12 ">
+
+          
+                <div class="row">
+
+                <?php for ($i=0; $i<count($products);$i++) { ?>
+                    <div class="col-sm-4 col-lg-4 col-md-4 col-xs-12">
+                        <a class="product" href="product.php?id=<?php echo $products[$i]->id; ?>">
+                           <?php if ($products[$i]->images) { ?>
+                             <div class="image" style="background-image:url(<?php echo $products[$i]->images[0] ?>)">
+                             </div>
+                            <?php } else {?>
+                             <div class="image" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=600&h=600)">
+                                </div>  
+                           
+                            <?php } ?>
+
+                            <div class="info row">
+                                    <div class="col-xs-8 name"><?php echo $products[$i]->name ?></div>
+                                    <div class="col-xs-4 text-right">€ <?php echo $products[$i]->price ?></div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php } ?>
+                
+
+              
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 <script type="text/javascript">
 	
-	var cart = <?php echo json_encode($cart); ?>;
-
+var cart = <?php echo json_encode($cart); ?>;
 </script>
-<script type="text/javascript" src="/js/shop.js"></script>
 <?php require("footer.php"); ?>

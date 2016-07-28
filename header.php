@@ -11,7 +11,7 @@ include('bootstrap_shop.php');
 		<meta name="keywords" content="">
 		<title>Your store</title>
 		<!-- Bootstrap -->
-		<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/public/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/public/css/style.css" media="all">
 
 		
@@ -20,8 +20,8 @@ include('bootstrap_shop.php');
 	<body style="height:100%;margin-top:100px;">
 		<?php include("navbar.php"); ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/public/components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/public/components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/public/components/marketcloud-js/dist/marketcloud.min.js"></script>
 <script type="text/javascript">
 	marketcloud.public = "<?php echo getenv("MARKETCLOUD_PUBLIC_KEY"); ?>";

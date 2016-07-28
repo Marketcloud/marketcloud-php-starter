@@ -6,7 +6,7 @@
 ?>
 
     <!-- Page Content -->
-    <div class="container" style="margin-top:100px;">
+    <div class="container-fluid">
     
     <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -37,7 +37,7 @@
             <div class="col-md-4">
 
                 <div class="product-controls">
-                    <h3 class="price text-center">€ <?php echo  $product->price; ?></h3>
+                    <div class="price text-center">€ <?php echo  $product->price; ?></div>
                     <?php  foreach ($product->variantsDefinition as $v_name => $v_values) { ?>
                         <div><b><?php echo  $v_name; ?></b></div>
                         <div class="form-group">

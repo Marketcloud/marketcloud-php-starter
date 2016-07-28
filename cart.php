@@ -1,6 +1,6 @@
 <?php require('header.php'); ?>
 <!-- Page Content -->
-    <div class="container" style="margin-top:100px;" >
+    <div class="container-fluid" >
 
 
     <?php if (count($cart->items) > 0) { ?>
