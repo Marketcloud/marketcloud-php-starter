@@ -13,5 +13,13 @@
       "description": "A secret key for the Marketcloud API",
       "required" : true
     }
-  }
+  },
+  "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "heroku/php"
+        }
+]
 }
