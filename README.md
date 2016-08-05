@@ -7,7 +7,7 @@ PHP starter eCommerce project with Marketcloud as backend
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Marketcloud/marketcloud-php-starter)
 
 ## Demo
-http://marketcloud-demo.herokuapp.com
+http://marketcloud-php.herokuapp.com
 ## Features
 * Built on plain PHP, plus the Marketcloud node client
 * Composer depenencies
