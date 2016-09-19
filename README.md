@@ -9,7 +9,7 @@ PHP starter eCommerce project with Marketcloud as backend
 ## Demo
 http://marketcloud-php.herokuapp.com
 ## Features
-* Built on plain PHP, plus the Marketcloud node client
+* Built on plain PHP, plus the Marketcloud PHP client
 * Composer depenencies
 * Boostrap3 based frontend plus some JQuery
 * Easily replace the small JQuery code with your favorite Javascript framework like React/Angular/Angular2
