@@ -33,9 +33,9 @@
                         <div>
                             <?php  if ($item->has_variants === true) {
 
-                                    foreach ($product->variantsDefinition as $v_name => $v_values) { ?>
+                                    foreach ($item->variantsDefinition as $v_name => $v_values) { ?>
                                         <span class="label label-primary" style="margin-right:5px">
-                                        <?php echo  $item->variant[$v_name] ?>
+                                        <?php echo  $item->variant->{$v_name} ?>
                                     </span>
                                     <?php } ?>
                             <?php } ?>
@@ -48,10 +48,13 @@
                                 class="form-control"
                                 value="<?php echo  $item->quantity; ?>">
                     </td>
+                    <?php if ($item->price_discount) { ?>
+                    <td><strike>$ <?php echo   $item->price; ?></strike> <span>$ <?php echo   $item->price_discount; ?></span></td>
+                    <?php } else { ?>
                     <td><?php echo   $item->price; ?></td>
-                    <td>$0.00</td>
-                    <td><?php echo  ($item->price * $item->quantity); ?></td>
-                    <td><a href="#" class="btn btn-danger removeButton" data-product-id="<?php echo  $item->product_id; ?>" data-variant-id="<?php echo  $item->variant_id; ?>"><i class="fa fa-trash-o"></i></a></td>
+                    <?php } ?>
+                    <td>$ <?php echo  ($item->price * $item->quantity); ?></td>
+                    <td><a href="#" class="btn btn-danger removeButton" data-product-id="<?php echo  $item->product_id; ?>" data-variant-id="<?php echo  $item->variant_id; ?>"><i class="fa fa-trash"></i> Remove</a></td>
                   </tr>
               <?php } ?>
                 </tbody>

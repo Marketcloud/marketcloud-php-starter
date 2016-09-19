@@ -28,9 +28,9 @@
 		$payment_response = Marketcloud\Payments::create(array(
 								"order_id" => $order->id,
 								"method" => "Braintree",
-								//"nonce" => $_POST["braintree_nonce"]
+								"nonce" => $_POST["braintree_nonce"]
 								//"nonce" => "fake-valid-nonce"
-								"nonce" => "fake-processor-declined-visa-nonce"
+								//"nonce" => "fake-processor-declined-visa-nonce"
 		));
 
 		
@@ -48,11 +48,26 @@
 			
 			//Resettiamo il carrello
 			//creandone uno nuovo e salvandolo in sessione
+
 			
-			//$cart_response = Marketcloud\Carts::create();
-			//$_SESSION["marketcloud_cart_id"] = $cart_response->body->data->id;
+			$cart_response = Marketcloud\Carts::create(array());
+			$_SESSION["marketcloud_cart_id"] = $cart_response->body->data->id;
+
+			//Sending the notification
+			/*$response = \Httpful\Request::post('https://api.marketcloud.it/v0/notifications/confirm_order/'.$order->id)
+		    ->expectsJson()
+		    ->addHeader('Authorization',Marketcloud\Marketcloud::getAuthorizationHeader())
+		    ->send();
+
+
+		    if ($response->body->status !== true){
+		    	echo "Unable to send notification to the client".json_encode($response->body);
+		    }
+		    // Now we have automatic notifications
+		    */
 
 			//Portiamo l'utente ad una pagina di conferma dell'ordine
+
 			
 			require_once("order_confirmed.php");
 

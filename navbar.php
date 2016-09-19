@@ -56,6 +56,7 @@
               
               <li class="divider"></li>
               <li><a class="text-center" href="cart.php">View Cart</a></li>
+              <li><a class="text-center" href="checkout.php">Checkout</a></li>
           </ul>
         </li>
       </ul>
