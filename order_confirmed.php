@@ -1,11 +1,6 @@
 <?php require('header.php'); ?>
-<?php 
-	$product = Marketcloud\Products::getById($_GET["id"]);
-	$product = $product->body->data;
-?>
 <div class="container-fluid slidethankyou shop-container">
 			<div class="text_box white centered txt_center">
-				<h2 class="yellow">Merchandising</h2>
 
 			</div>
 			
