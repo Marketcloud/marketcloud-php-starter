@@ -1,6 +1,7 @@
 {
     "require": {
-        "marketcloud/marketcloud-php": "^1.0"
+        "marketcloud/marketcloud-php": "^1.0.7",
+        "nategood/httpful": "^0.2.20"
     },
     "require-dev": {
 		"heroku/heroku-buildpack-php": "*"

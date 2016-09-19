@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b9669b4acc2137c19955fd993eca552",
-    "content-hash": "a1716974377c1a90d84d8e248dcb8ec4",
+    "hash": "3c47a98c06f1eeb20e45eaf375e7f70a",
+    "content-hash": "c9b874884da740c2d7e45197dfff668a",
     "packages": [
         {
             "name": "marketcloud/marketcloud-php",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Marketcloud/marketcloud-php.git",
-                "reference": "fb891127dfd69044d6404c42f9cad855927275bd"
+                "reference": "9d30dbc1b08a6dbedd8b9c482baf05853dfa798c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Marketcloud/marketcloud-php/zipball/fb891127dfd69044d6404c42f9cad855927275bd",
-                "reference": "fb891127dfd69044d6404c42f9cad855927275bd",
+                "url": "https://api.github.com/repos/Marketcloud/marketcloud-php/zipball/9d30dbc1b08a6dbedd8b9c482baf05853dfa798c",
+                "reference": "9d30dbc1b08a6dbedd8b9c482baf05853dfa798c",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "ecommerce",
                 "marketcloud"
             ],
-            "time": "2016-07-04 08:24:51"
+            "time": "2016-09-18 20:09:49"
         },
         {
             "name": "nategood/httpful",
@@ -99,7 +99,52 @@
             "time": "2015-10-26 16:11:30"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "v109",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "cd2d13992b72d049aa270d4b745aae6329e0c037"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/cd2d13992b72d049aa270d4b745aae6329e0c037",
+                "reference": "cd2d13992b72d049aa270d4b745aae6329e0c037",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "time": "2016-07-21 11:26:05"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
