@@ -630,8 +630,8 @@ function checkout() {
     var order = {
         shipping_address: the_address,
         billing_address: the_address,
-        cart_id: cart.id,
-        shipping_id: $("input[name='shippingMethod']").val()
+        cart_id: Number(cart.id),
+        shipping_id: Number($("input[name='shippingMethod']").val())
     }
 
     var form = $("<form method='POST' action='/checkout.php'></form>");

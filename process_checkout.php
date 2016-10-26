@@ -28,8 +28,8 @@
 		$payment_response = Marketcloud\Payments::create(array(
 								"order_id" => $order->id,
 								"method" => "Braintree",
-								"nonce" => $_POST["braintree_nonce"]
-								//"nonce" => "fake-valid-nonce"
+								//"nonce" => $_POST["braintree_nonce"],
+								"nonce" => "fake-valid-nonce"
 								//"nonce" => "fake-processor-declined-visa-nonce"
 		));
 
