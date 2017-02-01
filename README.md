@@ -1,4 +1,4 @@
-![Marketcloud](http://www.marketcloud.it/img/logo_1200.png)
+![Marketcloud](http://www.marketcloud.it/img/logo/new_with_text.png)
 # PHP + Marketcloud eCommerce starter
 PHP starter eCommerce project with Marketcloud as backend
 
@@ -37,3 +37,7 @@ Now you can run the app with
 php -S localhost:8000
 ```
 or using your favorite web server.
+
+## Checkout configuration
+This app uses Braintree to handle payments, in order to accept payments using this app, remember to setup the Braintree integration in your Marketcloud Dashboard.
+More information here [Braintree integration for Marketcloud](https://www.marketcloud.it/documentation/guides/braintree)
