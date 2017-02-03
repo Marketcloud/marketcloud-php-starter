@@ -2,9 +2,9 @@
 <?php
 	$products = Marketcloud\Products::get($_GET);
 	$products = $products->body->data;
-	$categories = Marketcloud\Categories::get();
+	$categories = Marketcloud\Categories::get(array());
 	$categories = $categories->body->data;
-	$brands = Marketcloud\Brands::get();
+	$brands = Marketcloud\Brands::get(array());
 	$brands = $brands->body->data;
 ?>
 <div class="container-fluid">
