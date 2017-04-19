@@ -2,7 +2,7 @@
   "name": "PHP Marketcloud starter",
   "description": "A barebone eCommerce website with PHP and Marketcloud",
   "repository": "https://github.com/Marketcloud/marketcloud-php-starter",
-  "logo": "https://marketcloudstatic01.blob.core.windows.net/images/logo_squared_dark_blue_2.png",
+  "logo": "https://marketcloudstatic01.blob.core.windows.net/website-v2/logo-v2.1-centered-padding.png",
   "keywords": ["php", "marketcloud", "ecommerce"],
   "env": {
     "MARKETCLOUD_PUBLIC_KEY": {
